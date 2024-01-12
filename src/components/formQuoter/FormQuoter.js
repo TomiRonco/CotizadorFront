@@ -65,7 +65,7 @@ const FormQuoter = ({ sendFormData }) => {
           onClick={submitHandler}
           disabled={isLoading}
         >
-          Calculate
+          {isLoading ? "Calculando..." : "Calculate"}
         </button>
       </form>
       <Results result={result} />
