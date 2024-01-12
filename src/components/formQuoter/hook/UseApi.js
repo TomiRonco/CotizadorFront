@@ -5,14 +5,17 @@ const UseApi = async (amount, date) => {
       date,
     };
 
-    const response = await fetch("http://localhost:8000/process-data/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-      credentials: "include",
-    });
+    const response = await fetch(
+      "https://cotizadahoyback.onrender.com/process-data/",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+        credentials: "include",
+      }
+    );
 
     if (!response.ok) {
       throw new Error("No se pudo obtener respuesta exitosa de la API.");
