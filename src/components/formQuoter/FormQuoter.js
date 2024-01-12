@@ -10,6 +10,7 @@ const initialValues = {
 const FormQuoter = ({ sendFormData }) => {
   const [data, setData] = useState(initialValues);
   const [result, setResult] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const amountHandler = (event) => {
     setData({ ...data, amount: event.target.value });
@@ -28,11 +29,14 @@ const FormQuoter = ({ sendFormData }) => {
     event.preventDefault();
 
     try {
+      setIsLoading(true);
       const resultados = await UseApi(data.amount, data.date);
       setResult(resultados);
       console.log("Solicitud exitosa:", resultados);
     } catch (error) {
       console.error("Error al realizar la solicitud:", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -59,6 +63,7 @@ const FormQuoter = ({ sendFormData }) => {
           type="submit"
           className="btn btn-primary mt-2 w-100"
           onClick={submitHandler}
+          disabled={isLoading}
         >
           Calculate
         </button>
