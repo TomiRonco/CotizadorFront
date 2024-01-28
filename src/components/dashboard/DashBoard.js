@@ -59,8 +59,8 @@ const DashBoard = () => {
 
   useEffect(() => {
     const fetchDataFromBackend = async () => {
-      const uvaUrl = "http://127.0.0.1:8000/update-uva/";
-      const dolarUrl = "http://127.0.0.1:8000/update-dollar/";
+      const uvaUrl = "https://cotizadahoyback.onrender.com/update-uva/";
+      const dolarUrl = "https://cotizadahoyback.onrender.com/update-dollar/";
 
       const uvaData = await fetchData(uvaUrl);
       const dolarData = await fetchData(dolarUrl);
