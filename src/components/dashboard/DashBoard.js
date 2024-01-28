@@ -59,8 +59,9 @@ const DashBoard = () => {
 
   useEffect(() => {
     const fetchDataFromBackend = async () => {
-      const uvaUrl = "https://cotizadahoyback.onrender.com/update-uva";
-      const dolarUrl = "https://cotizadahoyback.onrender.com/update-dollar";
+      const uvaUrl = "https://cotizadahoyback-bqjv.onrender.com/update-uva";
+      const dolarUrl =
+        "https://cotizadahoyback-bqjv.onrender.com/update-dollar";
 
       const uvaData = await fetchData(uvaUrl);
       const dolarData = await fetchData(dolarUrl);
@@ -89,7 +90,7 @@ const DashBoard = () => {
           <li className="nav-item">
             <a
               className="nav-link"
-              href="	https://cotizadahoyback.onrender.com/update-uva"
+              href="https://cotizadahoyback-bqjv.onrender.com/update-uva"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -99,7 +100,7 @@ const DashBoard = () => {
           <li className="nav-item">
             <a
               className="nav-link"
-              href="	https://cotizadahoyback.onrender.com/update-dollar"
+              href="https://cotizadahoyback-bqjv.onrender.com/update-dollar"
               target="_blank"
               rel="noopener noreferrer"
             >

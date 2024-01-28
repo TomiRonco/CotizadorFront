@@ -6,7 +6,7 @@ const UseApi = async (amount, date) => {
     };
 
     const response = await fetch(
-      "	https://cotizadahoyback.onrender.com/process-data/",
+      "https://cotizadahoyback-bqjv.onrender.com/process-data/",
       {
         method: "POST",
         headers: {
