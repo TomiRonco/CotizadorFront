@@ -1,3 +1,16 @@
-.bg-default {
-  background-color: #a4a4a4;
+.navbar {
+  background-color: #ffffff; /* Cambia el color de fondo según tus preferencias */
+  padding: 10px;
+}
+
+.customContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    display: none;
+  }
 }

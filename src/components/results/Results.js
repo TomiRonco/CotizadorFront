@@ -2,32 +2,33 @@ import React from "react";
 
 const Results = ({ result }) => {
   return (
-    <div className="mt-4 p-3 border border-dark rounded">
+    <div className="mt-2 p-3 border border-primary rounded">
       {result ? (
-        <div className="text-center">
-          <h2 className="text-uppercase fs-3">Resultados</h2>
+        <div className="text-left">
+          <h2 className="text-center fs-5">En pesos son...</h2>
           <p>
             UVA:{" "}
-            {result.uva ? (
-              <strong>${result.uva}</strong>
+            {result.uva !== undefined && result.uva !== 0 ? (
+              <strong>${result.uva.toFixed(2)}</strong>
             ) : (
-              <span>No hay valor disponible para la fecha seleccionada</span>
+              <span>Aumentar monto</span>
             )}
           </p>
           <p>
             Dólar Compra:{" "}
-            {result.dollarPurchase ? (
-              <strong>${result.dollarPurchase}</strong>
+            {result.dollarPurchase !== undefined &&
+            result.dollarPurchase !== 0 ? (
+              <strong>${result.dollarPurchase.toFixed(2)}</strong>
             ) : (
-              <span>No hay valor disponible para la fecha seleccionada</span>
+              <span>Aumentar monto</span>
             )}
           </p>
           <p>
             Dólar Venta:{" "}
-            {result.dollarSale ? (
-              <strong>${result.dollarSale}</strong>
+            {result.dollarSale !== undefined && result.dollarSale !== 0 ? (
+              <strong>${result.dollarSale.toFixed(2)}</strong>
             ) : (
-              <span>No hay valor disponible para la fecha seleccionada</span>
+              <span>Aumentar monto</span>
             )}
           </p>
         </div>

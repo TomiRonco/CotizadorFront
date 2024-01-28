@@ -41,35 +41,36 @@ const FormQuoter = ({ sendFormData }) => {
   };
 
   return (
-    <>
-      <form className="w-25">
-        <div className="d-flex gap-3">
+    <div className="d-flex flex-column justify-content-center align-items-center">
+      <div className="d-flex flex-column flex-sm-row gap-3">
+        <div className="input-group">
+          <span className="input-group-text border border-primary">$</span>
           <input
-            className="form-control"
+            className="form-control border border-primary"
             type="number"
-            placeholder="amount"
+            placeholder="ARS"
             onChange={amountHandler}
             value={data.amount}
           />
-          <input
-            className="form-control"
-            type="date"
-            placeholder="date"
-            onChange={dateHandler}
-            value={data.date}
-          />
         </div>
-        <button
-          type="submit"
-          className="btn btn-primary mt-2 w-100"
-          onClick={submitHandler}
-          disabled={isLoading}
-        >
-          {isLoading ? "Calculando..." : "Calculate"}
-        </button>
-      </form>
-      <Results result={result} />
-    </>
+        <input
+          className="form-control border border-primary"
+          type="date"
+          placeholder="date"
+          onChange={dateHandler}
+          value={data.date}
+        />
+      </div>
+      <button
+        type="submit"
+        className="btn btn-primary mt-2"
+        onClick={submitHandler}
+        disabled={isLoading}
+      >
+        {isLoading ? "Calculando..." : "Calcular"}
+      </button>
+      {result !== null && <Results result={result} />}
+    </div>
   );
 };
 
