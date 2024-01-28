@@ -1,3 +1,7 @@
+.containerCustom {
+  height: 90vh;
+}
+
 .navbar {
   background-color: #ffffff; /* Cambia el color de fondo según tus preferencias */
   padding: 10px;

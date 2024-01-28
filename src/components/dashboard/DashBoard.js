@@ -79,61 +79,28 @@ const DashBoard = () => {
   }, []);
 
   return (
-    <div className="vh-100">
-      <nav className="navbar navbar-expand-lg d-flex justify-content-center align-items-center text-center border-bottom border-2 border-primary">
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <a className="nav-link" href="/">
-              Inicio
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              className="nav-link"
-              href="https://cotizadahoyback-bqjv.onrender.com/update-uva"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              UVA Histórico
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              className="nav-link"
-              href="https://cotizadahoyback-bqjv.onrender.com/update-dollar"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Dólar Histórico
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <div className="containerCustom d-flex flex-column align-items-center">
+      {/* Fila para el título */}
+      <div className="row w-100 justify-content-center mt-4">
+        <div className="col-md-6">
+          <h3 className="text-center">TLQuoter</h3>
+        </div>
+      </div>
 
-      <h1 className="d-flex justify-content-center align-items-center mt-5 fs-2 fw-bold">
-        TLQuoter
-      </h1>
-
-      <div className="customContainer">
+      {/* Fila para Cotización y Conversor, centrada verticalmente */}
+      <div className="customContainer m-auto">
         <div className="row w-100">
-          <div className="col-md-6 mt-5">
+          <div className="col-md-6">
             <h3 className="text-center">Cotización del día</h3>
             <QuoteCards uvaData={uvaData} dolarData={dolarData} />
           </div>
 
-          <div className="col-md-6 mt-5">
+          <div className="col-md-6">
             <h3 className="text-center">Conversor de moneda</h3>
             <FormQuoter />
           </div>
         </div>
       </div>
-
-      <footer className="bg-primary text-white mt-5 p-5 d-flex flex-column align-items-center justify-content-center">
-        <h3 className="text-center fs-5">Página creada por</h3>
-        <h4 className="text-center fs-6">
-          Tomas Roncoroni <br /> Leandro Tanoni
-        </h4>
-      </footer>
     </div>
   );
 };

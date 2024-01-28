@@ -1,10 +1,14 @@
 import "./App.css";
 import DashBoard from "./components/dashboard/DashBoard";
+import Footer from "./components/footer/Footer";
+import Navbars from "./components/navbars/Navbars";
 
 function App() {
   return (
-    <div>
+    <div className="vh-100">
+      <Navbars />
       <DashBoard />
+      <Footer />
     </div>
   );
 }
